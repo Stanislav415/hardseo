@@ -20,7 +20,8 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
 </script>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Стас Саф Олександрович Жорсткий SEO 20.01.1995</title>
+    <title>Калькулятор Онлайн Простий і Зручний для Швидких Розрахунків</title>
+    <meta name="description" content="Використовуйте наш простий і інтуїтивний онлайн калькулятор для швидких математичних обчислень. Додайте, віднімайте, множте та діліть – усе це в зручному інтерфейсі!">
     <meta name="google-site-verification" content="9DXCMo_jm0UHslaX8GvdWUSjteOIEtl_Zgn3uALMh9E" />
     <!-- Google tag (gtag.js) -->
 <script async src="https://www.googletagmanager.com/gtag/js?id=G-1XHPEG0QY2"></script>
@@ -32,15 +33,103 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
   gtag('config', 'G-1XHPEG0QY2');
 </script>
 
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            background-color: #f4f4f4;
+        }
+
+        .calculator {
+            border: 1px solid #ccc;
+            padding: 20px;
+            background-color: #fff;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        }
+
+        #display {
+            width: 100%;
+            padding: 10px;
+            font-size: 24px;
+            margin-bottom: 10px;
+            text-align: right;
+            border: 1px solid #ccc;
+        }
+
+        .buttons {
+            display: grid;
+            grid-template-columns: repeat(4, 1fr);
+            grid-gap: 10px;
+        }
+
+        button {
+            padding: 20px;
+            font-size: 18px;
+            cursor: pointer;
+            background-color: #eee;
+            border: 1px solid #ccc;
+        }
+
+        button:hover {
+            background-color: #ddd;
+        }
+    </style>
+
 </head>
 <body>
         <!-- Google Tag Manager (noscript) -->
 <noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-KHTLKGNN"
 height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
 <!-- End Google Tag Manager (noscript) -->
-    <h1>Стас Саф Олександрович Жорсткий SEO 20.01.1995</h1>
-    <p>Ви готові до справжнього прориву у світі SEO? Наш курс "Жорський SEO" – це ваш шанс зануритися в глибини пошукових оптимізацій, які виходять за межі базових знань. Цей курс розроблений для тих, хто хоче не просто розуміти, але й повністю контролювати свою стратегію SEO.</p>
-    <p>Ми почнемо з основ, але швидко перейдемо до складних технік: від аналізу конкурентів до впровадження новітніх алгоритмів пошукових систем. Вивчимо, як ефективно використовувати ключові слова, оптимізувати контент і будувати якісні зворотні посилання. Крім того, ви дізнаєтеся, як правильно налаштовувати аналітику та відстежувати результати, щоб завжди бути на крок попереду конкурентів.</p>
-    <p>Курс "Жорський SEO" включає практичні завдання, що дозволяють застосувати отримані знання на реальних проектах. Наші викладачі – практики з багаторічним досвідом, які допоможуть вам досягти вершини в SEO-індустрії. Не втрачайте можливість стати експертом у сфері, яка постійно змінюється і розвивається!</p>
+    <h1>Простий Калькулятор</h1>
+    <p>Калькулятори, як пристрої для математичних обчислень, виникли кілька тисяч років тому з появою абака. Перший механічний калькулятор створив Блез Паскаль у 1642 році. Сучасні цифрові калькулятори стали популярними в 1970-х роках з розвитком інтегральних схем.</p>
+        <div class="calculator">
+        <input type="text" id="display" disabled>
+        <div class="buttons">
+            <button onclick="clearDisplay()">C</button>
+            <button onclick="appendNumber('7')">7</button>
+            <button onclick="appendNumber('8')">8</button>
+            <button onclick="appendNumber('9')">9</button>
+            <button onclick="appendOperator('+')">+</button>
+            <button onclick="appendNumber('4')">4</button>
+            <button onclick="appendNumber('5')">5</button>
+            <button onclick="appendNumber('6')">6</button>
+            <button onclick="appendOperator('-')">-</button>
+            <button onclick="appendNumber('1')">1</button>
+            <button onclick="appendNumber('2')">2</button>
+            <button onclick="appendNumber('3')">3</button>
+            <button onclick="appendOperator('*')">*</button>
+            <button onclick="appendNumber('0')">0</button>
+            <button onclick="appendOperator('/')">/</button>
+            <button onclick="calculate()">=</button>
+        </div>
+    </div>
+
+    <script>
+        let display = document.getElementById("display");
+
+        function clearDisplay() {
+            display.value = "";
+        }
+
+        function appendNumber(number) {
+            display.value += number;
+        }
+
+        function appendOperator(operator) {
+            display.value += " " + operator + " ";
+        }
+
+        function calculate() {
+            try {
+                display.value = eval(display.value);
+            } catch (error) {
+                display.value = "Error";
+            }
+        }
+    </script> 
 </body>
 </html>
