@@ -103,6 +103,91 @@ src="https://www.facebook.com/tr?id=1802884183551243&ev=PageView&noscript=1"
 /></noscript>
 <!-- End Meta Pixel Code -->
 </head>
+ body {
+            font-family: Arial, sans-serif;
+            line-height: 1.6;
+            margin: 0;
+            padding: 0;
+            background-color: #f4f4f4;
+        }
+
+        header {
+            background: #35424a;
+            color: #ffffff;
+            padding: 20px 0;
+            text-align: center;
+        }
+
+        h1 {
+            margin: 0;
+        }
+
+        main {
+            padding: 20px;
+        }
+
+        section {
+            margin-bottom: 20px;
+            padding: 15px;
+            background: #ffffff;
+            border-radius: 5px;
+            box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+        }
+
+        .responsive {
+            width: 100%;
+            height: auto;
+            border-radius: 5px;
+        }
+
+        footer {
+            text-align: center;
+            padding: 10px 0;
+            background: #35424a;
+            color: #ffffff;
+            position: relative;
+            bottom: 0;
+            width: 100%;
+        }
+
+        .hidden {
+            display: none;
+        }
+
+        /* Styles for the contact form */
+        form {
+            display: flex;
+            flex-direction: column;
+            gap: 10px;
+            max-width: 400px;
+            margin: auto;
+        }
+
+        label {
+            font-weight: bold;
+        }
+
+        input, textarea {
+            padding: 8px;
+            border: 1px solid #ddd;
+            border-radius: 4px;
+            font-size: 1em;
+        }
+
+        button {
+            padding: 10px;
+            background-color: #35424a;
+            color: #ffffff;
+            border: none;
+            border-radius: 4px;
+            cursor: pointer;
+        }
+
+        button:hover {
+            background-color: #3f5560;
+        }
+    </style>
+</head>
 <body>
     <header>
         <h1>SEO Optimization</h1>
@@ -133,6 +218,24 @@ src="https://www.facebook.com/tr?id=1802884183551243&ev=PageView&noscript=1"
             <button id="showTipBtn">Show a Random SEO Tip</button>
             <p id="tip" class="hidden"></p>
         </section>
+
+        <!-- Contact Form Section -->
+        <section>
+            <h2>Contact Us</h2>
+            <form id="contactForm">
+                <label for="name">Name:</label>
+                <input type="text" id="name" name="name" required>
+                
+                <label for="email">Email:</label>
+                <input type="email" id="email" name="email" required>
+                
+                <label for="message">Message:</label>
+                <textarea id="message" name="message" rows="4" required></textarea>
+                
+                <button type="submit">Send Message</button>
+            </form>
+            <p id="formMessage" class="hidden">Thank you! Your message has been sent.</p>
+        </section>
     </main>
 
     <footer>
@@ -140,6 +243,7 @@ src="https://www.facebook.com/tr?id=1802884183551243&ev=PageView&noscript=1"
     </footer>
 
     <script>
+        // Array of SEO tips
         const tips = [
             "Use relevant keywords in your titles.",
             "Optimize your images with alt tags.",
@@ -148,11 +252,19 @@ src="https://www.facebook.com/tr?id=1802884183551243&ev=PageView&noscript=1"
             "Improve loading speed for a better user experience."
         ];
 
+        // Show random SEO tip on button click
         document.getElementById("showTipBtn").addEventListener("click", function() {
             const randomTip = tips[Math.floor(Math.random() * tips.length)];
             const tipElement = document.getElementById("tip");
             tipElement.textContent = randomTip;
             tipElement.classList.toggle("hidden");
+        });
+
+        // Form submission handler
+        document.getElementById("contactForm").addEventListener("submit", function(event) {
+            event.preventDefault();
+            document.getElementById("formMessage").classList.remove("hidden");
+            document.getElementById("contactForm").reset();
         });
     </script>
 </body>
